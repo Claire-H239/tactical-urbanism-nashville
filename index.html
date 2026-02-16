@@ -17,6 +17,27 @@
   .header-top {flex-direction: column;}
   .header-right {justify-content: flex-start;}
 }
+  .logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin: 18px 0 6px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo-strip img {
+  height: 46px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .logo-strip img {
+    height: 38px;
+  }
+}
 
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
     h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 44px); }
@@ -54,7 +75,7 @@
       </p>
     </div>
 
-    <div class="header-right">
+    <div class="logo-strip" aria-label="Project sponsors and partners">
       <img src="Vanderbilt_Logo.png" alt="Vanderbilt University">
       <img src="NDOT_Logo.png" alt="Nashville Department of Transportation">
       <img src="Shelby_Hills_Logo.png" alt="Shelby Hills Neighborhood Association">
