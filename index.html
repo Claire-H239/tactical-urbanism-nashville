@@ -39,6 +39,33 @@
   }
 }
 
+.install-grid{
+  display: grid;
+  grid-template-columns: 320px 1fr; /* image column + text column */
+  gap: 18px;
+  align-items: start;
+}
+
+.install-photo{
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 3;       /* keeps consistent shape */
+  object-fit: cover;         /* crops nicely without stretching */
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+
+/* Mobile: stack image above bullets */
+@media (max-width: 820px){
+  .install-grid{
+    grid-template-columns: 1fr;
+  }
+  .install-photo{
+    max-width: 100%;
+    aspect-ratio: 16 / 9;    /* nicer wide image on phones */
+  }
+}
+
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
     h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 44px); }
     .sub { margin: 0 0 18px; color: var(--muted); font-size: 18px; line-height: 1.4; }
@@ -170,19 +197,26 @@
 
 
       <!-- WHAT WE'RE INSTALLING -->
-      <section>
-        <h2>What we’re installing</h2>
-        <ul>
-          <li><strong>Marked crosswalks</strong> in key crossing locations.</li>
-          <li><strong>Painted curb extensions (bulb-outs)</strong> to reduce turning speeds on/off S 10th Street.</li>
-          <li><strong>Visibility improvements</strong> near KIPP Kirkpatrick Elementary.</li>
-          <li><strong>Flexible delineators</strong> mounted with horizontal metal rod to reinforce the temporary geometry.</li>
-          <li><strong>Street mural (~3,000 sq ft)</strong> to increase visibility and strengthen neighborhood identity.</li>
-          <li><strong>ADA temporary curb ramp</strong> to maintain accessibility during the pilot.</li>
-          <li><strong>Project information signage</strong> explaining the pilot and how to share feedback.</li>
-        </ul>
-        <p class="small">This is a temporary pilot designed to be removable with minimal pavement impact.</p>
-      </section>
+  <section>
+  <h2>What we’re installing</h2>
+
+  <div class="install-grid">
+    <img class="install-photo" src="Mural_Plan2.jpg" alt="Project overview rendering or plan">
+
+    <div>
+      <ul>
+        <li><strong>Marked crosswalks</strong> in key crossing locations.</li>
+        <li><strong>Painted curb extensions (bulb-outs)</strong> to reduce turning speeds on/off S 10th Street.</li>
+        <li><strong>Visibility improvements</strong> (including parking restrictions) near KIPP Kirkpatrick Elementary.</li>
+        <li><strong>Flexible delineators</strong> mounted with <strong>butyl adhesive pads</strong> to reinforce the temporary geometry.</li>
+        <li><strong>Street mural (~3,000 sq ft)</strong> to increase visibility and strengthen neighborhood identity.</li>
+        <li><strong>ADA temporary curb ramp</strong> to maintain accessibility during the pilot.</li>
+        <li><strong>Project information signage</strong> explaining the pilot and how to share feedback.</li>
+      </ul>
+      <p class="small">This is a temporary pilot designed to be removable with minimal pavement impact.</p>
+    </div>
+  </div>
+</section>
 
       <!-- HOW WE'LL MEASURE IMPACT -->
       <section>
